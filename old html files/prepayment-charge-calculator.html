@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Fortress Mortgage| THE NEW BETTER WAY TO GET A MORTGAGE</title>
+        <meta content="FortressMortgage is the quicker and easier way to get a mortgage. See how you can save up to thousands of dollars with our BetterRate™ mortgages." name="description">
+        <meta content="fortress, mortgage" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.ico" rel="icon">
+        <link href="assets/img/apple-touch-icon-2.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link href="assets/vendor/owlcarousel/css/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/vendor/owlcarousel/css/carousel.css" rel="stylesheet">
+
+        <!-- JQuery File -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+
+    <body id="navbar">
+        <!-- ======= Navbar ======= -->
+        <header id="header" class="d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row visible-nav">
+                    <div class="col-md-12">
+                        <div class="logo-container">
+                            <a href="index.html" class="logo">
+                                <img src="Assets/img/logo/Fortress.png" alt="FORTRESS" class="org-logo">
+                                <img src="Assets/img/logo/Frotress-white.png" alt="FORTRESS" class="white-logo">
+                          </a>
+                        </div>
+                        <div class="menu-icon" id="menu">
+                            <span class="menu-icon__line menu-icon__line-left"></span>
+                            <span class="menu-icon__line"></span>
+                            <span class="menu-icon__line menu-icon__line-right"></span>
+                        </div>
+                        <div class="nav">
+                            <div class="nav__content">
+                                <a href="index.html" class="logo">
+                                    <img src="Assets/img/logo/Fortress.png" alt="FORTRESS">
+                                </a>
+                                <ul class="nav__list">
+                                    <li class="nav__list-item"><a href="mortgage.html">Home</a></li>
+                                    <li class="nav__list-item"><a href="products.html">Products</a></li>
+                                    <li class="nav__list-item"><a href="rates.html">Rates</a></li>
+                                    <li class="nav__list-item"><a href="calculators.html">Calculators<a onclick="showdropdown();"><i class="hidden-arrow bi bi-chevron-right"></i></a></a>
+                                        <ul class="nav_dropdown" id="nav_dropdown">
+                                            <li class="nav__list-item"><a href="affordability-calculator-test.html">Affordability Calculator</a></li>
+                                            <li class="nav__list-item"><a href="prepayment-charge-calculator.html">Prepayment Charge Calculator</a></li>
+                                            <li class="nav__list-item"><a href="mortgage-comparison-calculator.html">Mortgage Comparison Calculator</a></li>
+                                            <li class="nav__list-item"><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Apply Now Banner Section-->
+        <section style="margin-top: 100px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 apply-banner">
+                        <h1 class="title" style="color: #fff;">Prepayment charge calculator</h1>
+                        <p class="description">This calculator will give you an estimate of how much you might need to pay as a prepayment charge. Our mortgages come with a 20% prepayment privilege. A prepayment charge is applied when you want to pay more than your prepayment privilege or when you pay off your mortgage in full.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="prepayment" class="calculator-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="margin: 20px 0;">
+                        <label id="prepayment-type"><p>I want to prepay</p></label>
+                        <input type="radio" id="prepay-partially" name="prepayment-type" value="partially" checked="checked" onchange="changePrepayForm();">
+                        <label for="prepay-partially"><p>Partially</p></label>
+                        <input type="radio" id="prepay-fully" name="prepayment-type" value="fully" onchange="changePrepayForm();">
+                        <label for="prepay-fully"><p>Fully</p></label>
+                    </div>
+                    <div class="col-md-6 gray-bg" id="partially-form">
+                        <h4 class="text-center" style="padding: 30px 0;">Tell us about your mortgage</h4>
+                        <form class="d-flex flex-column">
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                    <span class="input-left">$</span>
+                                    <label id="mortgage-balance" for="validationDefault01">Mortgage balance at the start of your term</label>
+                                    <input type="text" name="mortgage-balance" class="form-control amount" id="validationDefault01" value="0.00">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                    <span class="input-left">$</span>
+                                    <label id="remaining-balance" for="validationDefault02">Remaining mortgage balance</label>
+                                    <input type="text" name="remaining-balance" class="form-control amount" id="validationDefault02" value="0.00">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                    <label id="mortgage-type" for="validationDefault03">Mortgage term and type</label>
+                                    <select class="form-control form-select" type="text" name="projecttype"  id="validationDefault03">
+                                        <option value="0" selected>Select</option>
+                                        <option value="1">1 Year Fixed-Rate Closed</option>
+                                        <option value="2">2 Year Fixed-Rate Closed</option>
+                                        <option value="3">3 Year Fixed-Rate Closed</option>
+                                        <option value="4">4 Year Fixed-Rate Closed</option>
+                                        <option value="5">5 Year Fixed-Rate Closed</option>
+                                        <option value="7">7 Year Fixed-Rate Closed</option>
+                                        <option value="10">10 Year Fixed-Rate Closed</option>
+                                        <option value="3V">3 Year Variable-Rate Closed</option>
+                                        <option value="5V">5 Year Variable-Rate Closed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                    <label id="interest-rate" for="validationDefault04">Interest rate</label>
+                                    <input type="text" name="interest-rate" class="form-control" id="validationDefault04" value="0.00">
+                                    <span class="input-right">%</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                    <label id="discount-received" for="validationDefault05">Discount received  &nbsp;<a data-toggle="tooltip" data-placement="top" title="The discount you received is a percentage off of the posted rate, which results in your mortgage interest rate.">
+                                        <i class="fa fa-info-circle"></i>
+                                      </a></label>
+                                    <input type="text" name="discount-received" class="form-control" id="validationDefault05" value="0.00">
+                                    <span class="input-right">%</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                  <label id="maturity-date" for="validationDefault06">Maturity (Renewal) date
+                                    &nbsp;<a data-toggle="tooltip" data-placement="top" title="This is the date your term will end and your mortgage is up for renewal.">
+                                      <i class="fa fa-info-circle"></i>
+                                    </a></label>
+                                  <input type="date" name="maturity-date" class="form-control" id="validationDefault06" placeholder="Select">
+                                  <span class="input-right"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-row" style="margin: 20px 0;">
+                                <div class="col-xs-12 mb-3">
+                                    <strong>How much have you already prepaid this year?</strong>
+                                    <p>This is the amount that you have already paid as prepayment towards your remaining mortgage balance. You can find this on your QuestMortgage Account summary.</p>
+                                    <span class="input-left">$</span>
+                                    <label id="prepaid-amount" for="validationDefault07">Prepaid amount <span>- Optional</span></label>
+                                    <input type="text" name="prepaid-amount" class="form-control amount" id="validationDefault07" value="0.00">
+                                </div>
+                            </div>
+                            <div class="form-row" style="margin: 20px 0;">
+                                <div class="col-xs-12 mb-3">
+                                    <strong>How much would you like to prepay?</strong>
+                                    <p>Your prepayment privilege is 20% of your balance at the start of the term. If this amount exceeds your prepayment privilege, a charge will be applied.</p>
+                                    <span class="input-left">$</span>
+                                    <label id="prepayment-amount" for="validationDefault08">Prepayment amount</label>
+                                    <input type="text" name="prepayment-amount" class="form-control amount" id="validationDefault08" value="0.00">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="col-sm-12 col-xs-12 mb-3">
+                                    <a class="btn btn-orange" onclick="calculatePrepayment();">CALCULATE</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 gray-bg" id="fully-form">
+                        <h4 class="text-center" style="padding: 30px 0;">Tell us about your mortgage</h4>
+                        <form class="d-flex flex-column">
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                    <span class="input-left">$</span>
+                                    <label id="fully-remaining-balance" for="validationDefault02">Remaining mortgage balance</label>
+                                    <input type="text" name="fully-remaining-balance" class="form-control amount" id="validationDefault02" value="0.00">
+                                    
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                    <label id="mortgage-type" for="validationDefault03">Mortgage term and type</label>
+                                    <select class="form-control form-select" type="text" name="projecttype"  id="validationDefault03">
+                                        <option value="0" selected>Select</option>
+                                        <option value="1">1 Year Fixed-Rate Closed</option>
+                                        <option value="2">2 Year Fixed-Rate Closed</option>
+                                        <option value="3">3 Year Fixed-Rate Closed</option>
+                                        <option value="4">4 Year Fixed-Rate Closed</option>
+                                        <option value="5">5 Year Fixed-Rate Closed</option>
+                                        <option value="7">7 Year Fixed-Rate Closed</option>
+                                        <option value="10">10 Year Fixed-Rate Closed</option>
+                                        <option value="3V">3 Year Variable-Rate Closed</option>
+                                        <option value="5V">5 Year Variable-Rate Closed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                    <label id="fully-interest-rate" for="validationDefault04">Interest rate</label>
+                                    <input type="text" name="fully-interest-rate" class="form-control" id="validationDefault04" value="0.00">
+                                    <span class="input-right">%</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                  <label id="fully-maturity-date" for="validationDefault06">Maturity (Renewal) date
+                                    &nbsp;<a data-toggle="tooltip" data-placement="top" title="This is the date your term will end and your mortgage is up for renewal.">
+                                      <i class="fa fa-info-circle"></i>
+                                    </a></label>
+                                  <input type="date" name="fully-maturity-date" class="form-control" id="validationDefault06" placeholder="Select">
+                                  <span class="input-right"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-xs-12 mb-3">
+                                  <span class="input-left">$</span>
+                                  <label id="fully-cash-back" for="validationDefault06">Cash back - Optional
+                                    &nbsp;<a data-toggle="tooltip" data-placement="top" title="If you received a cash back and are paying off your mortgage in full before your term ends, then you'll need to repay a prorated portion of your cash back.">
+                                      <i class="fa fa-info-circle"></i>
+                                    </a></label>
+                                  <input type="text" name="fully-cash-back" class="form-control amount" id="validationDefault06" value="0.00">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="col-sm-12 col-xs-12 mb-3">
+                                    <a class="btn btn-orange" onclick="calculatePrepayment();">CALCULATE</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 text-center" style="margin-top: 30px;">
+                        <div class="top-results">
+                            <h3>Your estimated prepayment charge is:</h3>
+                            <span class="figures main-color">$</span><span class="figures main-color" id="results"></span>
+                        </div>
+                        <div style="padding: 10px; background-color: #F8F8FA; margin: 20px 0;">
+                            <strong style="font-size: 18px;"><i class="fa fa-comment"></i> Have a question?</strong>
+                            <p>Call <a class="btn btn-bgnone" href="tel:4162017088">416-201-7088</a> to speak with a Mortgage Advisor.</p>
+                        </div>
+                        
+                        <div style="margin: 20px 0; text-align: justify;">
+                            <p>The information and estimated results provided in the prepayment charge calculator are based on the information you provided and are for illustrative purposes only, and should not be relied upon. We use reasonable efforts to provide accurate and up-to-date information in this calculator, but cannot guarantee that all information is accurate, complete or current at all times. The actual prepayment charge and cash back repayment may differ from the estimate provided. Additional costs, such as discharge, assignment, or registration fees, may apply and are not included in the estimate. Additional costs and fees vary by province and may change at any time without prior notice.</p>
+                            <p>For partial prepayments, the prepayment charge is estimated based on the amount of prepayment privilege remaining for your anniversary year. This value was estimated as the difference between the prepayment privilege and the already prepaid amount you inputted in the calculator and may not reflect actual values. The savings results estimates assume a constant interest rate over the length of a 25 year amortization period and monthly payment frequency. The estimated prepayment charge is not factored into the savings estimate.</p>
+                            <p>To know your actual prepayment charge and cash back repayment, or if you have any questions, please contact us at <a class="btn btn-bgnone" href="tel:4162017088">416-201-7088</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--  FAQs Section-->
+        <section id="faqs-section" class="gray-bg"> 
+            <div class="container">
+                <div class="row">
+                    <h1 class="heading text-center">Frequently asked questions</h1>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is the home buyers' plan?</strong>
+                            <p class="description">The Canadian Government’s Home Buyers' Plan (HBP) allows first-time home buyers to borrow up to $35,000 from their RRSP for a down payment, tax-free.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is the difference between an open and closed mortgage?</strong>
+                            <p class="description">With a closed mortgage, you will receive a lower interest rate (compared to an open mortgage), but there is a maximum annual amount you can pay towards your mortgage balance without penalty.</p>
+                    
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is the mortgage stress test?</strong>
+                            <p class="description">The mortgage stress test requires financial institutions to make sure a borrower can still make mortgage payments if interest rates increase.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is the difference between a mortgage amortization period and mortgage term?</strong>
+                            <p class="description">Your mortgage amortization is the length of time until your mortgage is fully repaid, typically ranging from 25-30 years. Your mortgage will have a set term. The term is the length of time you are committing to your mortgage agreement.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is mortgage default insurance?</strong>
+                            <p class="description">Mortgage default insurance protects lenders if a borrower is unable to repay their mortgage and is a regulatory requirement for high ratio mortgages (less than 20% down payment).</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                          <strong class="title">What is creditor insurance?</strong>
+                           <p class="description">Creditor insurance protects you and your family. It's used to pay out a mortgage balance or cover your mortgage payments on your behalf if something unexpected happens.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn btn-bgnone">SEE ALL <i style="font-size: 15px;" class="fa fa-chevron-right"></i></a>
+            </div>
+        </section>
+
+        
+        <!--  Insurance Section-->
+        <section id="insurance-section"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-wrapper text-center">
+                        <h1 class="title">Get expert advice when you need it</h1>
+                        <p class="description">Call us at 1-888-909-5588 to get your own dedicated Mortgage Advisor to help you through the process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container-fluid footer-block">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <p class="copyright">©2020 <a href="index.html">FORTRESS</a></p>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 d-flex justify-content-end">
+                        <div class="social-block text-primary">
+                            <ul class="social-links">
+                              <li><a href="#" class="instagram"><i class="bx bxl-instagram"></i></a></li>
+                              <li><a href="#" class="youtube"><i class="bx bxl-youtube"></i></a></li>
+                              <li><a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a></li>
+                              <li><a href="#" class="facebook"><i class="bx bxl-facebook"></i></a></li>
+                              <li><a href="#" class="twitter"><i class="bx bxl-twitter"></i></a></li>
+                              <li><a href="#" class="tiktok"><i class="bx bxl-tiktok"></i></a></li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer><!-- End Footer -->
+
+
+        <div class="modal fade popup-modal" id="apply-now" role="dialog">
+            <div class="modal-dialog modal-holder" role="document">
+              <div class="modal-content popup-content">
+                <div class="modal-header flex-column">
+                  <button type="button" class="close popup-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="bi bi-x-lg"></i></span>
+                  </button>
+                  <h2 class="modal-title popup-label">Let's get started with Real Estate Funding</h2>
+                </div>
+                <div class="modal-body popup-body">
+                    <div class="container-sm">
+                      <div class="row">
+                        <div class="col-md-1 d-xs-none"></div>
+                        <div class="col-md-10 col-sm-12">
+                          <form class="d-flex flex-column" action="applynow.php" method="post" role="form">
+                            <div class="form-row">
+                              <div class="col-sm-6 col-xs-12 mb-3">
+                                <label for="validationDefault01">Name<span style="color: #cf0e07;">*</span></label>
+                                <input type="text" name="fname" class="form-control" id="validationDefault01" placeholder="Full Name" required>
+                              </div>
+                              <div class="col-sm-6 col-xs-12 mb-3">
+                                <label for="validationDefault02">Email Address<span style="color: #cf0e07;">*</span></label>
+                                <input type="text" name="email" class="form-control" id="validationDefault02" placeholder="Email Address" required>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-sm-6 col-xs-12 mb-3">
+                                <label for="validationDefault03">Phone</label>
+                                <input type="text" name="phone" class="form-control" id="validationDefault03" placeholder="Phone Number">
+                              </div>
+                              <div class="col-sm-6 col-xs-12 mb-3">
+                                <label for="validationDefault04">Type of Real Estate Project?<span style="color: #cf0e07;">*</span></label>
+                                <select class="form-control form-select" type="text" name="projecttype"  id="validationDefault04" placeholder="" required>
+                                  <option selected>Select your type</option>
+                                  <option value="Commercial-Construction">Commercial Construction</option>
+                                  <option value="Commercial-Acquisition">Commercial Acquisition</option>
+                                  <option value="Commercial-Refinance">Commercial Refinance</option>
+                                  <option value="Residential-Acquisition">Residential Acquisition/Refinance</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-sm-6 col-xs-12 mb-3">
+                                  <label for="validationDefault05">Funding Required?<span style="color: #cf0e07;">*</span></label>
+                                  <select class="form-control form-select" type="text" name="funding"  id="validationDefault05" placeholder="" required>
+                                    <option selected>Select your amount</option>
+                                    <option value="Less-than-$1M">Less than $1M</option>
+                                    <option value="$1M-$5M">$1M - $5M</option>
+                                    <option value="$5M-$10M">$5M - $10M</option>
+                                    <option value="$10M-and-above">$10M and above</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-6 col-xs-12 mb-3">
+                                    <label for="validationDefault06">Requested loan to value %<span style="color: #cf0e07;">*</span></label>
+                                    <select class="form-control form-select" type="text" name="loan-value"  id="validationDefault06" placeholder="" required>
+                                      <option selected>Select your value</option>
+                                      <option value="Less-than-50%">Less than 50%</option>
+                                      <option value="50%-65%">50% - 65%</option>
+                                      <option value="65%-75%">65% - 75%</option>
+                                      <option value="Above-75%">Above 75%</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="col-sm-12 col-xs-12 mb-3 text-center">
+                                    <button class="btn btn-orange" type="submit">Submit</button>
+                                </div>
+                            </div>
+
+                          </form>
+                      </div>
+                      <div class="col-md-1 d-xs-none"></div>
+                    </div>
+              
+              
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/owlcarousel/js/popper.min.js"></script>
+        <script src="assets/vendor/owlcarousel/js/owl.carousel.min.js"></script>
+        <script src="assets/vendor/owlcarousel/js/carousel.js"></script>
+
+         <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+        <script>changePrepayForm();</script>
+    </body>
+</html>

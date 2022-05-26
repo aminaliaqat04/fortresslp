@@ -1,0 +1,1529 @@
+/* @font-face {
+  font-family: "CustomFont";
+  src: url("../fonts/adobe-caslon-pro/ACaslonPro-Bold.otf") format("opentype"),
+  url("../fonts/adobe-caslon-pro/Adobe\ Caslon\ Pro\ Bold.ttf") format("truetype");
+  } */
+
+  @font-face {
+    font-family: 'CaslonSSK-SemiBold';
+    src:url('../fonts/webfonts_CaslonSSK-SemiBold/CaslonSSK-SemiBold.ttf.woff') format('woff'),
+        url('../fonts/webfonts_CaslonSSK-SemiBold/CaslonSSK-SemiBold.ttf.svg#CaslonSSK-SemiBold') format('svg'),
+        url('../fonts/webfonts_CaslonSSK-SemiBold/CaslonSSK-SemiBold.ttf.eot'),
+        url('../fonts/webfonts_CaslonSSK-SemiBold/CaslonSSK-SemiBold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: 900;
+    font-style: normal;
+  }
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  body{
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5{
+    /* font-family: 'CaslonSSK-SemiBold'; */
+    /* font-weight: 900; */
+  }
+  p, ul{
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  p, h1, h2, strong, ul{
+      color: #464646;
+  }
+  .tooltip > .tooltip-inner{
+    background: #fff;
+    color: #000;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .form-control{
+    border-radius: 0;
+    height: 50px;
+    font-size: 18px;
+  }
+  .h100p{height: 100%;}
+  .mb-10{margin-bottom: 10px;}
+  .img-fit{object-fit: cover;}
+  .nopadding{padding: 0;}
+  .nomargin{margin: 0;}
+  .text-center{text-align: center;}
+  .main-color{color: #E26B4F;}
+  .btn-orange,.btn-orange:visited{
+    background-color: #E26B4F;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+  }
+  .btn-orange:hover, .btn-orange:visited:hover{
+    background-color: #a33921;
+    color: #fff;
+    text-decoration: none;
+  }
+  .btn-white,.btn-white:visited{
+    background-color: #fff;
+    color: #E26B4F !important;
+    font-size: 20px !important;
+    transition: all 0.4s ease-in;
+    padding: 6px 12px !important;
+    font-weight: 600;
+  }
+  .btn-white:hover, .btn-white:visited:hover{
+    background-color: #fff;
+    color: #a33921 !important;
+    text-decoration: none !important;
+  }
+  .btn-bgnone{
+    background: none;
+    color: #E26B4F;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+  }
+  .btn-bgnone:hover{
+    background: none;
+    color: #e26a4f91;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .btn-small{font-size: 16px;}
+
+  .white-logo{
+      display: none;
+  }
+  #menu{
+    visibility: hidden;
+  }
+  .menu-icon {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    z-index: 2;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+  }
+  .menu-hidden {
+      visibility: hidden;
+  }
+  .menu-icon__line {
+    height: 1px;
+    width: 30px;
+    display: block;
+    background-color: #1d1d1d;
+    margin-bottom: 6px;
+    transition: transform 0.2s ease, background-color 0.5s ease;
+  }
+  .menu-icon__line-left {
+    width: 15px;
+  }
+  .menu-icon__line-right {
+    width: 15px;
+    float: right;
+  }
+  
+  .nav {
+    position: fixed;
+    z-index: 1;
+    /* visibility: hidden; */
+  }
+  .nav:before, .nav:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 105px;
+    background: rgba(234, 234, 234, 0.2);
+    z-index: -1;
+    /* transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    transform: translateX(0%) translateY(-100%); */
+  }
+  .nav:after {
+    background: white;
+    /* transition-delay: 0s; */
+  }
+  .nav:before {
+    transition-delay: 0.1s;
+  }
+  .nav__content {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    text-align: end;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    right: 70px;
+  }
+  .nav__list-item {
+    position: relative;
+    display: inline-block;
+    transition-delay: 0.8s;
+    opacity: 1;
+    /* opacity: 0;
+    transform: translate(0%, 100%);
+    transition: opacity 0.2s ease, transform 0.3s ease; */
+    margin-right: 50px;
+  }
+  .nav__list-item:before {
+    content: "";
+    position: absolute;
+    background: #ff0000;
+    width: 20px;
+    height: 2px;
+    top: 100%;
+    transform: translate(0%, 0%);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  
+  .nav_dropdown_lg .nav__list-item:before {
+    background: #fff;
+  }
+  .nav__list-item:hover:before {
+    width: 100%;
+  }
+  .nav__list-item a{
+    color: #333;
+    padding-bottom: 30px;
+  }
+  
+  .nav__list-item .hidden-arrow{
+    display: none;
+  }
+
+  .nav__list-item a:hover{
+    text-decoration: none;
+  }
+  .nav_dropdown{
+    position: absolute;
+    width: 260px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    top: 55px;
+    box-shadow: rgb(47 51 60 / 20%) 3px 1px 7px;
+    border-top: 2px solid #E26B4F;
+    padding: 10px 0px;
+    opacity: .97;
+    display: none;
+  }
+  .nav_dropdown .nav__list-item{
+    margin: 10px;
+    width: fit-content;
+    font-size: 14px;
+  }
+  .nav_dropdown_lg .nav__list-item a{
+    color: #fff;
+  }
+  .nav__list-item:hover > .nav_dropdown{
+    display: flex;
+  }
+  .nav_dropdown_lg{
+    width: 100vw;
+    right: -250px;
+    background: #E26B4F;
+    opacity: 1;
+  }
+  .nav_dropdown_lg .left-col{border-right: 1px dashed rgba(255, 255, 255, 0.329);}
+  .nav_dropdown_lg .nav__list-title{
+    margin: 0 30px;
+    color: #fff;
+    font-size: 1.8rem;
+  }
+  body.nav-active .nav, body.mob-active .nav {
+    visibility: visible;
+  }
+  .nav:before, .nav:after{
+    box-shadow: rgb(47 51 60 / 20%) 3px 1px 7px;
+    left:0;
+  }
+  body.mob-active .nav:before, body.mob-active .nav:after {
+    transform: translateX(0%) translateY(0%);
+    box-shadow: rgb(47 51 60 / 20%) 3px 1px 7px;
+    left:0;
+  }
+  body.mob-active .nav__content{opacity: 1; height: 100vh;}
+  /* body.nav-active .nav:after,  */body.mob-active .nav:after {
+    transition-delay: 0.1s;
+  }
+  /* body.nav-active .nav:before, */body.mob-active .nav:before {
+    transition-delay: 0s;
+  }
+  body.nav-active .nav__list-item{opacity: 1;}
+  /* body.nav-active .nav__list-item, */body.mob-active .nav__list-item {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  }
+
+
+  body.nav-active .nav__list-item:nth-child(0), body.mob-active .nav__list-item:nth-child(0) {
+    transition-delay: 0.5s;
+  }
+  body.nav-active .nav__list-item:nth-child(1), body.mob-active .nav__list-item:nth-child(1) {
+    transition-delay: 0.6s;
+  }
+  body.nav-active .nav__list-item:nth-child(2), body.mob-active .nav__list-item:nth-child(2) {
+    transition-delay: 0.7s;
+  }
+  body.nav-active .nav__list-item:nth-child(3), body.mob-active .nav__list-item:nth-child(3) {
+    transition-delay: 0.8s;
+  }
+  body.nav-active .nav__list-item:nth-child(4), body.mob-active .nav__list-item:nth-child(4) {
+    transition-delay: 0.9s;
+  }
+  body.nav-active .nav__list-item:nth-child(5), body.mob-active .nav__list-item:nth-child(5) {
+    transition-delay: 1.0s;
+  }
+
+
+  #header{
+      position: fixed;
+      top: 0;
+      height: 90px;
+      width: 100%;
+      z-index: 1;
+  }
+
+  .logo{
+    position: fixed;
+    left: 60px;
+    top: 10px;
+  }
+
+  .logo img{
+    height: 100%;
+    width: 80px;
+  }
+  .org-logo{
+      display: block;
+  }
+
+  .visible-nav{
+      height: 110px;
+  }
+
+  .featured-carousel{margin-top: 10%}
+
+
+  .services{
+      display: flex;
+      justify-content: center;
+      margin: 30px 0px;
+  }
+  .services .btn-orange{
+    padding: 20px;
+    /* border-radius: 40px; */
+  }
+  .service-col{
+    box-shadow: rgb(47 51 60 / 20%) 0px 0px 10px 1px;
+    margin: 10px -6px;
+    padding: 20px 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-col .title{
+    display: block;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 20px 0px 10px 0px;
+    color: #000;
+    font-family: 'Secular One', sans-serif;
+  }
+  .service-col .service-link{
+    font-size: 16px;
+    color: #000;
+  }
+  .service-col .btn{
+    display: block;
+    margin: 5px 0;
+    font-weight: 900;
+  }
+
+  .service-col:hover{
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1));
+    box-shadow: rgba(0, 0, 0, 0.699) 0px 0px 10px 1px;
+    cursor: pointer;
+  }
+
+  /* .start-bg{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/startbusiness/startbusiness-banner.jpg');
+    background-size: cover;
+    background-position: 30% 50%;
+  }
+  .grow-bg{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/growyourbusiness/growyourbusiness-banner.jpg');
+    background-size: cover;
+    background-position: 30% 50%;
+  }
+  .realestate-bg{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/realestatefinancing/realestate-banner.jpg');
+    background-size: cover;
+    background-position: 30% 50%;
+  }
+  .construction-bg{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/constructionfinancing/constructionfinancing-banner.jpg');
+    background-size: cover;
+    background-position: 30% 50%;
+  }
+  .professionalservices-bg{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/professionalservices/professionalservices-banner.jpg');
+    background-size: cover;
+    background-position: 30% 50%;
+  }
+  .start-bg .title, .start-bg .description,.grow-bg .title, .grow-bg .description,.realestate-bg .title, .realestate-bg .description,.construction-bg .title, .construction-bg .description,.professionalservices-bg .title, .professionalservices-bg .description{
+    color: #fff;
+  }
+  .ourservices .service-col{
+    height: 400px;
+  }
+  .ourservices .service-col:hover{
+    background: linear-gradient(rgba(226,107,79,.7), rgba(226,107,79,.7));
+    background-size: cover;
+    background-position: 30% 50%;
+    box-shadow: rgba(0, 0, 0, 0.699) 0px 0px 10px 1px;
+    cursor: pointer;
+  } */
+  .img-text-section .img-wrap{
+      /* background: url(../img/home/whyus.png);
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%; */
+  }
+  .img-text-section .img-wrap img{
+    object-fit: cover;
+  }
+  .img-text-section .text-wrapper{
+      padding: 20px;
+  }
+  .img-text-section .title, .img-text-section strong{
+      text-transform: uppercase;
+      font-weight: 600;
+  }
+  .img-text-section .title{
+    font-size: 5rem;
+  }
+  .img-text-section .description{
+    font-size: 2rem;
+  }
+  .img-text-section strong{
+      font-size: 20px;
+  }
+/*   .img-text-section ul, .img-text-section p, .img-text-section a{
+      font-size: 16px;
+  } */
+
+  /* Real Estate Financing */
+  .banner .col-md-12{
+    position: relative;
+    height: 600px;
+  }
+  .banner .real-estate-banner{
+    background: url(../img/realestatefinancing/realestate-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+  .banner .text-wrapper{
+      background: linear-gradient(rgba(226,107,79,.9), rgba(226,107,79,.9));
+      padding: 60px;
+      width: 40%;
+      position: absolute;
+      z-index: 0;
+      top: 200px;
+      right: 0;
+      opacity: 1;
+  }
+  .banner .text-wrapper p{
+    color: #fff;
+  }
+  
+  .banner .text-wrapper h2, .banner .text-wrapper h1{
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .full-text .text-wrapper{
+    text-align: center;
+    padding: 60px 30px;
+    line-height: 2;
+  }
+  .full-text{
+    margin: 20px 0px;
+  }
+  .full-text .text-wrapper h1{
+    font-size: 60px;
+  }
+  .full-text .text-wrapper p,.full-text .text-wrapper h1, .full-text .text-wrapper ul{
+    
+    margin-bottom: 20px;
+  }
+  .full-text .text-wrapper ul{
+    text-align: left;
+  }
+  .mortgage-sections{
+    margin: 20px 0px;
+  }
+  .mortgage-sections:before{
+    content: "";
+    position: absolute;
+    background: #5e5c5c;
+    width: 100%;
+    height: 2px;
+    top: 0%;
+    transform: translate(0%, 0%);
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+  .mortgage-sections ul{
+    list-style-type:square;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mortgage-sections ul li{
+    font-size: 16px;
+    padding: 5px 0;
+    width: 50%;
+  }
+  .mortgage-sections .w100 li{
+    width: 100%;
+  }
+
+  .mortgage-sections .row > .col-xs-4{
+    margin: 10px 0px;
+  }
+
+  /* Services */
+  .banner .services-banner{
+    background: url(../img/services/services-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+  #services-prev .service-prev-col{
+    margin: 30px 0;
+  }
+  #services-prev img{
+    border-radius: 0 20px 0 0;
+
+  }
+  #services-prev .text-block{
+    border-radius: 0 0 0px 20px;
+    box-shadow: rgb(47 51 60 / 20%) 0px 0px 10px 1px;
+    padding: 10px;
+    min-height: 250px;
+  }
+  #services-prev .text-block .title{
+    text-transform: uppercase;
+    color: #e26b4f;
+    font-weight: 900;
+  }
+  #services-prev .text-block .link{
+    color: #e26b4f;
+  }
+  #services-prev .text-block .description{
+    padding: 0px 0px 10px 0px;
+    min-height: 150px;
+  }
+  /* Start Your Own Business */
+  .banner .start-business-banner{
+    background: url(../img/startbusiness/startbusiness-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+
+  /* Grow Your Business */
+  .banner .grow-business-banner{
+    background: url(../img/growyourbusiness/growyourbusiness-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+
+  /* Professional Services Business */
+  .banner .professional-services-banner{
+    background: url(../img/professionalservices/professionalservices-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+
+  /* About */
+  .banner .about-banner{
+    background: url(../img/about/about-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+
+  /* Construction Financing */
+  .banner .construction-financing-banner{
+    background: url(../img/constructionfinancing/constructionfinancing-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+
+  /* Mortgage Products */
+  .banner .mortgage-products-banner{
+    background: url(../img/mortgage/Products/fortress-mortgage-products-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+
+  /* Mortgage Application */
+  .banner .mortgage-application-banner{
+    background: url(../img/mortgage/fortress-liquidity-partners-mortgage-application-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+  #lean-banner{
+    background: linear-gradient(rgb(0, 0, 0,.7), rgba(0, 0, 0, 0.7)), url('../img/mortgage/slider3.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin: 100px 0;
+    padding: 50px;
+  }
+  #lean-banner .title, #lean-banner .description{color: #fff;}
+  #lean-banner .title{font-size: 5rem;}
+  #lean-banner .description{font-size: 2rem;}
+  #mortgage-application .text-wrapper{padding: 60px 30px 0px 30px;}
+  #mortgage-application .description{font-size: 2rem; margin: 20px 0;}
+  #mortgage-application .cols-wrapper{
+    padding: 3rem 5rem;
+    font-size: 2.4rem;
+    background-color: #F2F2F8;
+    color: #333;
+    line-height: 24px;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+  #mortgage-application .cols-wrapper:hover{
+    background-color: #bbbbbb;
+    color: #fff !important;
+  }
+  #mortgage-application .cols-wrapper .left-col{
+    font-size: 8rem;
+    color: #E26B4F;
+    margin-right: 40px;
+    font-weight: 600;
+  }
+  #signup-option .text-wrapper{padding: 100px 0;}
+  #signup-option .cols-wrapper{cursor: pointer; height: 280px; margin-bottom: 2rem;}
+  #signup-option .cols-wrapper:hover{transform: scale(1.03);}
+  
+  /* Mortgage About */
+  .banner .mortgage-about-banner{
+    background: url(../img/mortgage/About/fortress-about-banner.jpg);
+    height: 476px;
+    width: 80%;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+  }
+
+  #goals .goals-col{
+    
+  }
+  #goals h1{
+    font-size: 50px;
+  }
+  #goals p{
+    line-height: 2;
+  }
+  #capital .text-wrapper{
+    background: linear-gradient(rgb(0, 0, 0,.8), rgb(226, 105, 78,.8)), url('../img/about/cap-bg.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  #start-funding .text-wrapper{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,.5)), url('../img/clickhere.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  #start-funding .text-wrapper h1{
+    color: #fff;
+  }
+  #capital .text-wrapper p{
+    font-size: 18px;
+    color: #fff;
+  }
+  #banks{
+    margin: 30px 0px;
+    filter:grayscale(100%) opacity(80%);
+  }
+  #about-funding .heading-block{
+    margin: 40px 0px;
+  }
+  #about-funding .title-wrapper .title{
+    padding: 20px 0px;
+    font-size: 16px;
+  }
+  #about-funding .description{
+    margin-bottom: 20px;
+  }
+  #about-funding .steps{
+    color: #fff;
+    background: #E26B4F;
+    border-radius: 100%;
+    padding: 10px 15px;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: "Adobe Caslon Pro Bold", "sans-serif";
+  }
+  #about-funding .steps:after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #E26B4F;
+    position: absolute;
+    top: 12px;
+  }
+
+  /* Contact */
+  #contact{
+    margin-top: 90px;
+  }
+  #contact .img-wrap img{
+    height: 100vh;
+    object-fit: cover;
+  }
+  #contact h1{
+    font-size: 70px;
+    margin: 0;
+  }
+  #contact a, p{
+    display: block;
+    color: #464646;
+    margin: 0;
+  }
+
+  
+  
+  /* Footer */
+  #footer .footer-block{
+    background: #1d1d1d;
+    color: #fff;
+    font-size: 14px;
+  }
+  #footer .row{
+    padding: 30px 0px;
+  }
+  #footer .social-block{
+    margin-right: 25px;
+  }
+  
+  #footer .social-links {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+  }
+  #footer .social-links li{
+    padding: 0px 5px;
+  }
+  
+  #footer .social-links a {
+    font-size: 20px;
+    display: inline-block;
+    background: #464646;
+    color: #fff;
+    line-height: 1;
+    padding: 4px 0;
+    margin-right: 8px;
+    border-radius: 50%;
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    transition: 0.3s;
+  }
+  #footer .social-links a:hover {
+    background: #5e5c5c;
+    color: #fff;
+    text-decoration: none;
+  }
+  #footer .copyright{
+    color: #fff;
+    margin: 10px;
+    font-size: 12px;
+  }
+
+  #landingpage #footer .footer-block{
+    /* background: none; */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Modal */
+  .popup-modal .modal-holder{
+    width: 70%;
+    max-width: 70%;
+    margin-top: 0 ;
+  }
+  .popup-modal .popup-label{
+    color: #E26B4F;
+    font-weight: 900;
+  }
+  
+  .popup-modal .popup-content{
+    border-radius: 0;
+    padding: 50px 0px;
+  }
+  .popup-modal .modal-header{
+    border: 0;
+  }
+  .popup-modal .popup-close{
+    position: absolute;
+    top: 30px;
+    opacity: 1;
+    right: 20px;
+    color: #E26B4F;
+    font-size: 30px;
+    font-weight: 100;
+  }
+
+  /*Mortgage Updated*/
+  .homeloan-services{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/mortgage/Home/fortress-liquidity-partners-home.jpg);
+    background-size: cover;
+    background-position: 50% 70%;
+    padding: 100px 0;
+    margin: 0 !important;
+  }
+  .homeloan-services .left-pane{padding-right: 100px;}
+  .homeloan-services .left-pane .title{
+    font-size: 6rem;
+    color: #fff;
+  }
+  .homeloan-services .left-pane .description{
+    color: #fff;
+    margin: 20px 0;
+  }
+  .homeloan-services .service-col{
+    border-radius: 5px;
+    padding: 10px 70px 20px 10px;
+  }
+  .homeloan-services #one{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/mortgage/fortress-liquidity-partners-first-time-buyers1.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .homeloan-services #two{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/mortgage/fortress-liquidity-partners-renewals.jpeg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .homeloan-services #three{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/mortgage/fortress-liquidity-partners-refinancing.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .homeloan-services #four{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/mortgage/fortress-liquidity-partners-debt-consolidation.jpg);
+    background-size: cover;
+    background-position: 10%;
+  }
+  .homeloan-services #five{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/mortgage/fortress-liquidity-partners-commercial.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .homeloan-services #six{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/mortgage/fortress-liquidity-partners-divorce-seperation-mortgage.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .homeloan-services .service-col .col-md-12{
+    text-align: left !important;
+  }
+  .homeloan-services .service-col .title{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 700;
+  }
+  .homeloan-services .service-col .description{
+    font-size: 1.6rem;
+    line-height: 20px;
+    color: #fff;
+    margin: 30px 0;
+  }
+  .orange-bg{background-color: #E26B4F; padding: 30px;}
+  .orange-bg .title{color: #fff; margin-bottom: 0;}
+  .orange-bg .description{color: #fff;}
+  .mortgage-service-page{margin-top: 100px;}
+  .mortgage-service-page .left-col{padding-right: 50px;}
+  .mortgage-service-page .title{font-family: 'Raleway', sans-serif;}
+  .mortgage-service-page .description{margin: 20px 0; font-size: 2rem;}
+  .mortgage-service-page .orange-bg .description{margin: 0; font-weight: 600;}
+  #mortgage-services{margin: 100px 0;}
+  #mortgage-services .title{font-size: 2.4rem; font-weight: 600;}
+  #mortgage-services .description{font-size: 1.6rem;}
+  
+  /* Mortgage Page 
+  #m-banner .img-bg{
+    background: url(../img/mortgage/Home/fortress-mortgagehp-banner1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100vh;
+  }
+  #m-banner .img-bg .text-wrapper{
+    padding: 0px 50px 0px 90px;
+  }
+  #m-banner .img-bg .text-wrapper .title{
+    font-size: 50px;
+    font-weight: 900;
+  }*/
+  .nav_dropdown_lg .btn-holder{height: 200px;}
+  #m-banner img{
+    height: 100vh;
+    object-fit: cover;
+  }
+  #m-banner .text-block{
+    position: absolute;
+    top: 160px;
+    left: 5%;
+  }
+  #m-banner .text-block h1{
+    font-weight: 900;
+    font-size: 6rem;
+  }
+  #m-banner .text-block p{
+    font-size: 2.4rem;
+  }
+  #m-banner .btn-block .btn{
+    margin: 10px 0;
+    padding: 20px 10px;
+  }
+
+  .gray-bg{
+    background: #F2F2F8;
+    padding-bottom: 50px;
+  }
+  
+  /* Carousel */
+  .carousel-nav a:before{
+    
+  }
+  #steps-slider .carousel-nav col:hover:before {
+    width: 100%;
+  }
+  .owl-carousel {
+    z-index: 0;
+  }
+
+  /* Apply Now Banner */
+  .apply-banner{
+    background: #262D33;
+    padding: 30px;
+  }
+  .apply-banner .description{
+    color: #fff;
+    display: inline-block;
+  }
+  .apply-banner .title{color: #fff;}
+
+  /* Dark Bg Section */
+  .dark-bg{
+    background: #262D33;
+    margin: 0;
+    padding: 40px 20px;
+  }
+  .dark-bg .title, .dark-bg .heading, .dark-bg .description, .dark-bg .figures, .dark-bg small{
+    color: #fff;
+    padding: 10px 0;
+    margin: 0;
+  }
+  #comparison .left-col{
+    border-right: 1px dashed #e26a4f3b;
+  }
+  .figures{
+    font-size: 50px;
+    font-weight: 900;
+  }
+  #comparison .heading{
+    font-size: 20px;
+  }
+  .figures-description{
+    margin-top: 0;
+  }
+  #saving-comparison .details{
+    background: #F2F2F8;
+    padding: 20px 0;
+  }
+  #saving-comparison .title{
+    font-weight: 900;
+    padding: 40px 0;
+  }
+  #saving-comparison .cols-row{
+    width: 90%;
+  }
+  #saving-comparison .left-col, #saving-comparison .right-col{
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  #saving-comparison .cols-row .heading{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #e26a4fab;
+  }
+  #saving-comparison .cols-row .details .d-heading{
+    font-weight: 900;
+  }
+  #saving-comparison .cols-row .small-figures{
+    margin-bottom: 0;
+  }
+
+  #call-us{
+    margin-bottom: 40px;
+  }
+  #call-us .img-wrap img{
+    height: 500px;
+    object-fit: cover;
+    object-position: 10%;
+  }
+
+
+  #reasons{
+    padding: 130px 0px 50px 0;
+  }
+  #reasons .heading{
+    margin-bottom: 40px;
+    font-weight: 900;
+  }
+  #reasons .title{
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin: 20px 0 10px 0;
+  }
+  #reasons .description{
+    margin-bottom: 20px;
+    line-height: 2.8rem;
+  }
+  #gray-cols {
+    margin: 80px 0;
+  }
+  #gray-cols .col-md-6{
+    margin-bottom: 20px;
+  }
+  #gray-cols .text-wrapper{
+    padding: 40px;
+    background: #F2F2F8;
+  }
+  #gray-cols .text-wrapper p{
+    padding-bottom: 20px;
+  }
+  #help-section{
+    padding: 90px 80px;
+    margin-bottom: 80px;
+  }
+  #help-section .right-col .text-wrapper{
+    padding-bottom: 30px;
+  }
+  #help-section .left-col-1 strong, #help-section .left-col-2 strong{
+    color: #fff;
+    display: block;
+    padding: 10px 0px 40px 0px;
+  }
+  #insurance-section{
+    padding: 20px 60px;
+    margin: 20px 0;
+  }
+  #insurance-section .title{
+    margin-bottom: 40px;
+  }
+  #insurance-section .description{
+    margin-top: 20px;
+  }
+  #faqs-section{
+    padding: 60px 0;
+  }
+  #faqs-section .heading{
+    margin-bottom: 30px;
+  }
+  #faqs-section .text-wrapper{
+    margin-bottom: 20px;
+  }
+  #faqs-section .text-wrapper .title, #faqs-section .text-wrapper .description{
+    line-height: 1.5;
+  }
+  #faqs .panel{border: none;}
+  #faqs .panel-heading{padding: 15px;}
+  #faqs .panel-group{margin: 20px 0;}
+  #faqs .panel-title{font-family: 'Raleway', sans-serif; font-size: 1.8rem;}
+  #faqs .panel-title a, #faqs .panel-title a:hover{color: #E26B4F;}
+  #faqs .panel-title a.collapsed, #faqs .panel-title a:visited{color: #818181; text-decoration: none;}
+
+  /* Mortgage Rates*/
+  .select-purpose{
+    width: 40%;
+    text-align: center;
+  }
+  #results .row{
+    background: #e26a4f42;
+    padding: 40px;
+    margin: 10px 100px;
+  }
+  #results .text-wrapper .description{
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .table > :not(caption) > * > * {
+    border: none;
+  }
+  /*Updated Calculator Section*/
+  #calculators{padding: 50px 0;}
+  .calculator-tab{background: #fff; padding: 20px; margin: 20px 0;}
+  .calculator-tab .right-col{margin-left: 20px;}
+  .calculator-tab .right-col .heading{font-size: 3rem; display: block; padding: 10px 0;}
+  .calculator-tab .right-col .description{margin-bottom: 20px;}
+  .bootbox .btn-primary{background: #E26B4F;}
+  .bootbox .modal{}
+  .fade{opacity: 1;}
+  .form-control[disabled]{
+    cursor: auto;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .input-group .form-control{z-index: 0;}
+  input[name="amt"], input[name="pay"]{
+    color: #000;
+    text-align: center;
+    font-size: 4rem;
+    height: 100px;
+    font-family: "sans-serif";
+  }
+  form[name="maxcalc"] .row, form[name="prpaycalc"] .row{
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .label-orange{
+    background: #E26B4F;
+    font-size: 1.4rem;
+  }
+  .label-bgnone{
+    background: none;
+    color: #1d1d1d;
+    font-size: 1.4rem;
+  }
+  .label-bgnone b{
+    margin-right: 5px;
+    color: #E26B4F;
+  }
+  /* Calculator*/
+  .calculator-section{
+    margin: 100px 0;
+  }
+
+  /* Rathub calc*/
+  .rh{
+    visibility: visible !important;
+  }
+  .ratehub-calc .go, .ratehub-calc .get-details {
+    background-color: #E26B4F !important;
+  }
+  @media(max-width:991px)
+  {
+      #landingpage .container-fluid{
+        justify-content: start !important;
+      }
+      #landingpage .service-bg{
+        height: 40vh;
+      }
+      #mainpage .img-wrapper img{
+        width: 100%;
+      }
+  }
+  @media (max-width: 998px) {
+    html {
+      font-size: 55% !important;
+    }
+  }
+  @media (max-width: 768px) {
+    html {
+      font-size: 45% !important;
+    }
+  }
+  @media(max-width:480px)
+  {
+  
+  #mainpage .img-wrapper img{
+    width: 60%;
+  }
+  #mainpage .mort-service{
+    position: relative;
+    top: 50px;
+  }
+  #mainpage .bus-service{
+    position: relative;
+    bottom: 50px;
+  }
+  
+}
+  
+
+  @media(max-width:768px){
+  h1{font-size: 24px;}
+  h2{
+    font-size: 22px;
+  }
+  p{
+    font-size: 14px;
+  }
+  
+  #lp-logo img{
+    height: 60px;
+  }
+    .white-logo{
+        display: block;
+    }
+    .org-logo{
+        display: none;
+    }
+    .visible-nav{
+        background: #E26B4F;
+        box-shadow: rgb(47 51 60 / 20%) 3px 1px 7px;
+    }
+    #menu{visibility: visible;}
+    .menu-icon__line {
+        background-color: #fff;
+    }
+    .nav:before, .nav:after {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(234, 234, 234, 0.2);
+        z-index: -1;
+        transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+        transform: translateX(0%) translateY(-100%);
+    }
+    .nav:after {
+        background: white;
+        transition-delay: 0s;
+    }
+    .nav:before {
+        transition-delay: 0.1s;
+    }
+    .nav__content{
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: auto;
+        height: 0;
+        left: 0;
+        overflow-y: auto;
+        opacity: 0;
+    }
+    .nav__content .logo{
+        display: none;
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .nav__list-item {
+      opacity: 0;
+      transform: translate(0%, 100%);
+      transition: opacity 0.2s ease, transform 0.3s ease;
+    }
+    .nav__list-item, .nav_dropdown .nav__list-item{
+        margin: 10px 0px;
+        text-align: center;
+    }
+    .nav__list-item:before{
+        width: 0;
+    }
+  .nav__list-item:hover:before {
+    width: 0;
+  }
+    .nav_dropdown{
+      position: inherit;
+      width: 100%;
+      background: none;
+      text-align: center;
+      top: 0px;
+      box-shadow: none;
+      padding: 0px;
+    }
+    .nav_dropdown_lg{
+      width: 100%;
+      right: 0px;
+      overflow-y: scroll;
+      height: 500px;
+    }
+    .nav_dropdown_lg .nav__list-item a, .nav_dropdown_lg .nav__list-title{
+       color: #333;
+    }
+    .nav_dropdown_lg .left-col{border-right: none;}
+    .nav_dropdown_lg .nav__list-lg{
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav_dropdown_lg .nav__list-lg ul{
+      align-items: center;
+    }
+    .btn-holder{display: none !important;}
+    .nav__list-item:hover > .nav_dropdown {
+      align-items: center;
+    }
+    .nav__list-item .hidden-arrow{
+      display: inline-block;
+    }
+    body.mob-active .nav{
+        width: 100%;
+        height: 100%;
+    }
+    body.mob-active .menu-icon__line {
+        background-color: #000;
+        transform: translateX(0px) rotate(-45deg);
+    }
+    body.mob-active .menu-icon__line-left {
+        transform: translateX(1px) rotate(45deg);
+    }
+    body.mob-active .menu-icon__line-right {
+        transform: translateX(-1px) rotate(45deg);
+    }
+    #funding .row div:last-child, #construction-financing .row div:last-child{
+        order: -1;
+    }
+    .banner .col-md-12 {
+      height: 480px;
+    }
+    .banner .services-banner, .banner .real-estate-banner, .banner .start-business-banner, .banner .grow-business-banner, .banner .construction-financing-banner, .banner .professional-services-banner, .banner .about-banner, .banner .mortgage-products-banner, .banner .mortgage-rates-banner, .banner .mortgage-application-banner{
+      height: 300px;
+      width: 100%;
+      position: relative;
+      top: 90px;
+      overflow: hidden;
+    }
+    .banner .text-wrapper{
+      padding: 10px 0px;
+      width: 100%;
+      position: relative;
+      top: 89px;
+      text-align: center;
+    }
+    #contact .img-wrap img{
+      height: 400px;
+      object-fit: cover;
+      object-position: 10% 0%;
+      margin-bottom: 30px;
+    }
+    .full-text .text-wrapper h1 {
+      font-size: 40px;
+    }
+    #goals .enclose{
+      height: 400px;
+      margin: 0 0 10px 0;
+    }
+    #goals h1{
+      font-size: 30px;
+    }
+    #goals .mission-wrapper{
+      align-items: end;
+    }
+    #goals .overlay{
+      display: block;
+    }
+    #goals .philosophy-wrapper{
+      height: 400px;
+      align-items: end;
+    }
+    
+  #about-funding .steps:after{
+    width: 0%;
+  }
+    #footer .social-block{
+        margin: 0;
+    }
+    #footer .row .col-xs-12:last-child{
+        order: -1;
+        justify-content: center !important;
+    }
+    #footer .copyright{
+      text-align: center;
+    }
+    .popup-modal .modal-holder{
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+    
+    #m-banner{
+      position: relative;
+      top: 90px;
+    }
+    #m-banner img{
+      height: 80vh;
+      object-fit: cover;
+      object-position: 88% 0;
+    }
+    #m-banner .img-bg:before{
+      position: absolute;
+      content: '';
+      background: #252525;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: .5;
+    }
+    #m-banner .text-block{
+      /* position: relative; */
+      top: 10%;
+      left: 0;
+      text-align: center;
+      /* padding: 0 60px 10px 30px;
+      background: rgba(226,107,79,.7); */
+    }
+    #m-banner .text-block p{
+      color: #fff;
+    }
+    #m-banner .text-block h1{
+      color: #fff;
+      font-size: 40px;
+    }
+    .mortgage-service-page .right-col{order: -1;}
+    .orange-bg{background-color: #262D33;}
+    .calculator-tab{flex-direction: column; align-items: center; text-align: center;}
+
+    
+    .apply-banner .description{
+      display: block;
+    }
+
+    .figures{
+      font-size: 40px;
+    }
+    .left-col{
+      border: 0;
+    }
+
+    #call-us .img-wrap img{
+      height: 300px;
+      object-position: 0%;
+    }
+    
+    #help-section{
+      padding: 30px 10px;
+      margin-bottom: 80px;
+    }
+
+    #insurance-section {
+      padding: 0;
+    }
+
+    #results .row{
+      margin: 10px 0px;
+    }
+    .table-block{
+      overflow-x: auto;
+    }
+    .table-block p,  th{
+      font-size: 12px;
+    }
+    .rates-calculation .form-row{
+      flex-direction: column;
+    }
+    .select-purpose {
+      width: 50%;
+    }
+  }

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Fortress Mortgage| THE NEW BETTER WAY TO GET A MORTGAGE</title>
+        <meta content="FortressMortgage is the quicker and easier way to get a mortgage. See how you can save up to thousands of dollars with our BetterRate™ mortgages." name="description">
+        <meta content="fortress, mortgage" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.ico" rel="icon">
+        <link href="assets/img/apple-touch-icon-2.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link href="assets/vendor/owlcarousel/css/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/vendor/owlcarousel/css/carousel.css" rel="stylesheet">
+
+        <!-- JQuery File -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+
+    <body id="navbar">
+        <!-- ======= Navbar ======= -->
+        <header id="header" class="d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row visible-nav">
+                    <div class="col-md-12">
+                        <div class="logo-container">
+                            <a href="index.html" class="logo">
+                                <img src="Assets/img/logo/Fortress.png" alt="FORTRESS" class="org-logo">
+                                <img src="Assets/img/logo/Frotress-white.png" alt="FORTRESS" class="white-logo">
+                          </a>
+                        </div>
+                        <div class="menu-icon" id="menu">
+                            <span class="menu-icon__line menu-icon__line-left"></span>
+                            <span class="menu-icon__line"></span>
+                            <span class="menu-icon__line menu-icon__line-right"></span>
+                        </div>
+                        <div class="nav">
+                            <div class="nav__content">
+                                <a href="index.html" class="logo">
+                                    <img src="Assets/img/logo/Fortress.png" alt="FORTRESS">
+                                </a>
+                                <ul class="nav__list">
+                                    <li class="nav__list-item"><a href="mortgage.html">Home</a></li>
+                                    <li class="nav__list-item"><a href="products.html">Products</a></li>
+                                    <li class="nav__list-item"><a href="rates.html">Rates</a></li>
+                                    <li class="nav__list-item"><a href="calculators.html">Calculators<a onclick="showdropdown();"><i class="hidden-arrow bi bi-chevron-right"></i></a></a>
+                                        <ul class="nav_dropdown" id="nav_dropdown">
+                                            <li class="nav__list-item"><a href="affordability-calculator-test.html">Affordability Calculator</a></li>
+                                            <li class="nav__list-item"><a href="prepayment-charge-calculator.html">Prepayment Charge Calculator</a></li>
+                                            <li class="nav__list-item"><a href="mortgage-comparison-calculator.html">Mortgage Comparison Calculator</a></li>
+                                            <li class="nav__list-item"><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Apply Now Banner Section-->
+        <section style="margin-top: 100px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 apply-banner">
+                        <h1 class="title" style="color: #fff;">Mortgage comparison calculator</h1>
+                        <p class="description">Whether you're applying for a new mortgage or thinking about switching lenders, this comparison calculator can help you explore and pick the mortgage option that's right for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="prepayment" class="calculator-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="margin: 20px 0;">
+                        <div class="col-sm-5 col-xs-12 mb-3 d-flex align-items-center">
+                            <label class="select-purpose" style="width: 20%;">I'm </label>
+                            <select class="form-control form-select" type="text" name="select-purpose-1" onchange="changePurpose1();">
+                                <option selected value="buying-a-new-property">buying a new property</option>
+                                <option value="switching-my-mortgage">switching my mortgage</option>
+                              </select>
+                          </div>
+                          <div class="col-sm-6 col-xs-12 mb-3 d-flex align-items-center">
+                            <label class="select-purpose">and my goal is to</label>
+                            <select class="form-control form-select" type="text" name="select-purpose-2">
+                                <option selected value="pay-off-my-mortgage-faster">pay off my mortgage faster</option>
+                                <option value="save-on-interest">save on interest</option>
+                                <option value="lower-my-payments">lower my payments</option>
+                              </select>
+                          </div>
+                    </div>
+                    <div class="col-md-5" id="buying-a-new-house">
+                        <ul class="nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#mortgage1">Mortgage <span style="font-size: 20px">&nbsp;1</span></a></li>
+                            <li><a data-toggle="tab" href="#mortgage2">Mortgage <span style="font-size: 20px">&nbsp;2</span></a></li>
+                        </ul>
+                        <div class="col-md-12 gray-bg tab-content" style="padding-top: 30px;">
+                            <div id="mortgage1" class="tab-pane fade in active">
+                                <form class="d-flex flex-column">
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="property1-use"><p>How will you use this property?</p></label>
+                                            <br>
+                                            <input type="radio" id="i'll-live-there" name="property1-use" value="i'll live there" checked="checked">
+                                            <label for="i'll-live-there" class="radio-label"><p>I'll live there</p></label>
+                                            <br>
+                                            <input type="radio" id="live-and-rent" name="property1-use" value="I'll live there and rent it out">
+                                            <label for="" class="radio-label"><p>I'll live there and rent it out</p></label>
+                                            <br>
+                                            <input type="radio" id="rent" name="property1-use" value="I'll rent it out">
+                                            <label for="" class="radio-label"><p>I'll rent it out</p></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <span class="input-left">$</span>
+                                            <label id="purchase-price" for="validationDefault01">Purchase price</label>
+                                            <input type="text" name="purchase-price" class="form-control amount" id="validationDefault01" value="500000">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <span class="input-left">$</span>
+                                            <label id="down-payment-amount">Down payment amount</label>
+                                            <input type="text" name="down-payment-amount" class="form-control amount" value="25000">
+                                            <span>5% of purchase price</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                          <label for="validationDefault05">Amortization &nbsp;<a data-toggle="tooltip" data-placement="top" title="The length of time you have left before you fully pay off your mortgage.">
+                                            <i class="fa fa-info-circle"></i>
+                                          </a></label>
+                                          <div class="d-flex">
+                                            <select class="form-control form-select" type="text" name="years"  id="validationDefault05" required style="width: 50%;">
+                                                <option value="12years">12 years</option>
+                                                <option value="13years">13 years</option>
+                                                <option value="14years">14 years</option>
+                                                <option value="15years">15 years</option>
+                                                <option value="16years">16 years</option>
+                                                <option value="17years">17 years</option>
+                                                <option value="18years">18 years</option>
+                                                <option value="19years">19 years</option>
+                                                <option value="20years">20 years</option>
+                                                <option value="21years">21 years</option>
+                                                <option value="22years">22 years</option>
+                                                <option value="23years">23 years</option>
+                                                <option value="24years">24 years</option>
+                                                <option selected value="25years">25 years</option>
+                                            </select>
+                                            <select class="form-control form-select" type="text" name="months"  id="validationDefault05" style="width: 50%;">
+                                                <option value="0months" selected>0 months</option>
+                                                <option value="1months">1 months</option>
+                                                <option value="2months">2 months</option>
+                                                <option value="3months">3 months</option>
+                                                <option value="4months">4 months</option>
+                                                <option value="5months">5 months</option>
+                                                <option value="6months">6 months</option>
+                                                <option value="7months">7 months</option>
+                                                <option value="8months">8 months</option>
+                                                <option value="9months">9 months</option>
+                                                <option value="10months">10 months</option>
+                                                <option value="11months">11 months</option>
+                                                <option value="12months">12 months</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label for="validationDefault06">Payment frequency</label>
+                                            <select class="form-control form-select" type="text" name="payment-frequency"  id="validationDefault06" placeholder="" required>
+                                            <option value="Weekly">Weekly</option>
+                                            <option value="WeeklyAccelerated">Weekly Accelerated</option>
+                                            <option value="BiWeekly">Bi Weekly</option>
+                                            <option value="BiWeeklyAccelerated">Bi Weekly Accelerated</option>
+                                            <option value="SemiMonthly">Semi Monthly</option>
+                                            <option selected value="Monthly">Monthly</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="mortgage-type" for="validationDefault03">Mortgage term and type</label>
+                                            <select class="form-control form-select" type="text" name="projecttype"  id="validationDefault03">
+                                                <option value="0" selected>Select</option>
+                                                <option value="1">1 Year Fixed-Rate Closed</option>
+                                                <option value="2">2 Year Fixed-Rate Closed</option>
+                                                <option value="3">3 Year Fixed-Rate Closed</option>
+                                                <option value="4">4 Year Fixed-Rate Closed</option>
+                                                <option value="5">5 Year Fixed-Rate Closed</option>
+                                                <option value="7">7 Year Fixed-Rate Closed</option>
+                                                <option value="10">10 Year Fixed-Rate Closed</option>
+                                                <option value="3V">3 Year Variable-Rate Closed</option>
+                                                <option value="5V">5 Year Variable-Rate Closed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="interest-rate" for="validationDefault04">Interest rate</label>
+                                            <input type="text" name="interest-rate" class="form-control" id="validationDefault04" value="3.64">
+                                            <span class="input-right">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-sm-12 col-xs-12 mb-3">
+                                            <a class="btn btn-orange" onclick="calculatePrepayment();">CALCULATE</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="mortgage2" class="tab-pane fade in">
+                                <form class="d-flex flex-column">
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="property1-use"><p>How will you use this property?</p></label>
+                                            <br>
+                                            <input type="radio" id="i'll-live-there" name="property1-use" value="i'll live there" checked="checked">
+                                            <label for="i'll-live-there" class="radio-label"><p>I'll live there</p></label>
+                                            <br>
+                                            <input type="radio" id="live-and-rent" name="property1-use" value="I'll live there and rent it out">
+                                            <label for="" class="radio-label"><p>I'll live there and rent it out</p></label>
+                                            <br>
+                                            <input type="radio" id="rent" name="property1-use" value="I'll rent it out">
+                                            <label for="" class="radio-label"><p>I'll rent it out</p></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <span class="input-left">$</span>
+                                            <label id="purchase-price" for="validationDefault01">Purchase price</label>
+                                            <input type="text" name="purchase-price" class="form-control amount" id="validationDefault01" value="500000">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <span class="input-left">$</span>
+                                            <label id="down-payment-amount">Down payment amount</label>
+                                            <input type="text" name="down-payment-amount" class="form-control amount" value="25000">
+                                            <span>5% of purchase price</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                          <label for="validationDefault05">Amortization &nbsp;<a data-toggle="tooltip" data-placement="top" title="The length of time you have left before you fully pay off your mortgage.">
+                                            <i class="fa fa-info-circle"></i>
+                                          </a></label>
+                                          <div class="d-flex">
+                                            <select class="form-control form-select" type="text" name="years"  id="validationDefault05" required style="width: 50%;">
+                                                <option value="12years">12 years</option>
+                                                <option value="13years">13 years</option>
+                                                <option value="14years">14 years</option>
+                                                <option value="15years">15 years</option>
+                                                <option value="16years">16 years</option>
+                                                <option value="17years">17 years</option>
+                                                <option value="18years">18 years</option>
+                                                <option value="19years">19 years</option>
+                                                <option value="20years">20 years</option>
+                                                <option value="21years">21 years</option>
+                                                <option value="22years">22 years</option>
+                                                <option value="23years">23 years</option>
+                                                <option value="24years">24 years</option>
+                                                <option selected value="25years">25 years</option>
+                                            </select>
+                                            <select class="form-control form-select" type="text" name="months"  id="validationDefault05" style="width: 50%;">
+                                                <option value="0months" selected>0 months</option>
+                                                <option value="1months">1 months</option>
+                                                <option value="2months">2 months</option>
+                                                <option value="3months">3 months</option>
+                                                <option value="4months">4 months</option>
+                                                <option value="5months">5 months</option>
+                                                <option value="6months">6 months</option>
+                                                <option value="7months">7 months</option>
+                                                <option value="8months">8 months</option>
+                                                <option value="9months">9 months</option>
+                                                <option value="10months">10 months</option>
+                                                <option value="11months">11 months</option>
+                                                <option value="12months">12 months</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label for="validationDefault06">Payment frequency</label>
+                                            <select class="form-control form-select" type="text" name="payment-frequency"  id="validationDefault06" placeholder="" required>
+                                            <option value="Weekly">Weekly</option>
+                                            <option value="WeeklyAccelerated">Weekly Accelerated</option>
+                                            <option value="BiWeekly">Bi Weekly</option>
+                                            <option value="BiWeeklyAccelerated">Bi Weekly Accelerated</option>
+                                            <option value="SemiMonthly">Semi Monthly</option>
+                                            <option selected value="Monthly">Monthly</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="mortgage-type" for="validationDefault03">Mortgage term and type</label>
+                                            <select class="form-control form-select" type="text" name="projecttype"  id="validationDefault03">
+                                                <option value="0" selected>Select</option>
+                                                <option value="1">1 Year Fixed-Rate Closed</option>
+                                                <option value="2">2 Year Fixed-Rate Closed</option>
+                                                <option value="3">3 Year Fixed-Rate Closed</option>
+                                                <option value="4">4 Year Fixed-Rate Closed</option>
+                                                <option value="5">5 Year Fixed-Rate Closed</option>
+                                                <option value="7">7 Year Fixed-Rate Closed</option>
+                                                <option value="10">10 Year Fixed-Rate Closed</option>
+                                                <option value="3V">3 Year Variable-Rate Closed</option>
+                                                <option value="5V">5 Year Variable-Rate Closed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="interest-rate" for="validationDefault04">Interest rate</label>
+                                            <input type="text" name="interest-rate" class="form-control" id="validationDefault04" value="3.64">
+                                            <span class="input-right">%</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="col-sm-12 col-xs-12 mb-3">
+                                            <a class="btn btn-orange" onclick="calculatePrepayment();">CALCULATE</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div><!-- End of Buying a new house-->
+
+                    
+                    <div class="col-md-5" id="switching-my-mortgage">
+                        <ul class="nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#smortgage1">Mortgage <span style="font-size: 20px">&nbsp;1</span></a></li>
+                            <li><a data-toggle="tab" href="#smortgage2">Mortgage <span style="font-size: 20px">&nbsp;2</span></a></li>
+                        </ul>
+                        <div class="col-md-12 gray-bg tab-content" style="padding-top: 30px;">
+                            <div id="smortgage1" class="tab-pane fade in active">
+                                <form class="d-flex flex-column">
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="property1-use"><p>How will you use this property?</p></label>
+                                            <br>
+                                            <input type="radio" id="i-live-there" name="property1-use" value="i'll live there" checked="checked">
+                                            <label for="i'll-live-there" class="radio-label"><p>I live there</p></label>
+                                            <br>
+                                            <input type="radio" id="live-and-rent" name="property1-use" value="I'll live there and rent it out">
+                                            <label for="" class="radio-label"><p>I live there and rent it out</p></label>
+                                            <br>
+                                            <input type="radio" id="rent" name="property1-use" value="I'll rent it out">
+                                            <label for="" class="radio-label"><p>I rent it out</p></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <span class="input-left">$</span>
+                                            <label id="estimated-property-value" for="validationDefault01">Estimated property value</label>
+                                            <input type="text" name="estimated-property-value" class="form-control amount" id="validationDefault01" value="500000">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <span class="input-left">$</span>
+                                            <label id="remaining-balance">Remaining mortgage balance &nbsp;<a data-toggle="tooltip" data-placement="top" title="You can estimate this based on recent sales of similar homes in your area.">
+                                                <i class="fa fa-info-circle"></i>
+                                              </a></label>
+                                            <input type="text" name="remaining-balance" class="form-control amount" value="475000">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                          <label for="validationDefault05">Amortization &nbsp;<a data-toggle="tooltip" data-placement="top" title="The length of time you have left before you fully pay off your mortgage.">
+                                            <i class="fa fa-info-circle"></i>
+                                          </a></label>
+                                          <div class="d-flex">
+                                            <select class="form-control form-select" type="text" name="years"  id="validationDefault05" required style="width: 50%;">
+                                                <option value="12years">12 years</option>
+                                                <option value="13years">13 years</option>
+                                                <option value="14years">14 years</option>
+                                                <option value="15years">15 years</option>
+                                                <option value="16years">16 years</option>
+                                                <option value="17years">17 years</option>
+                                                <option value="18years">18 years</option>
+                                                <option value="19years">19 years</option>
+                                                <option value="20years">20 years</option>
+                                                <option value="21years">21 years</option>
+                                                <option value="22years">22 years</option>
+                                                <option value="23years">23 years</option>
+                                                <option value="24years">24 years</option>
+                                                <option selected value="25years">25 years</option>
+                                            </select>
+                                            <select class="form-control form-select" type="text" name="months"  id="validationDefault05" style="width: 50%;">
+                                                <option value="0months" selected>0 months</option>
+                                                <option value="1months">1 months</option>
+                                                <option value="2months">2 months</option>
+                                                <option value="3months">3 months</option>
+                                                <option value="4months">4 months</option>
+                                                <option value="5months">5 months</option>
+                                                <option value="6months">6 months</option>
+                                                <option value="7months">7 months</option>
+                                                <option value="8months">8 months</option>
+                                                <option value="9months">9 months</option>
+                                                <option value="10months">10 months</option>
+                                                <option value="11months">11 months</option>
+                                                <option value="12months">12 months</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label for="validationDefault06">Payment frequency</label>
+                                            <select class="form-control form-select" type="text" name="payment-frequency"  id="validationDefault06" placeholder="" required>
+                                            <option value="Weekly">Weekly</option>
+                                            <option value="WeeklyAccelerated">Weekly Accelerated</option>
+                                            <option value="BiWeekly">Bi Weekly</option>
+                                            <option value="BiWeeklyAccelerated">Bi Weekly Accelerated</option>
+                                            <option value="SemiMonthly">Semi Monthly</option>
+                                            <option selected value="Monthly">Monthly</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="mortgage-type" for="validationDefault03">Mortgage term and type</label>
+                                            <select class="form-control form-select" type="text" name="projecttype"  id="validationDefault03">
+                                                <option value="0" selected>Select</option>
+                                                <option value="1">1 Year Fixed-Rate Closed</option>
+                                                <option value="2">2 Year Fixed-Rate Closed</option>
+                                                <option value="3">3 Year Fixed-Rate Closed</option>
+                                                <option value="4">4 Year Fixed-Rate Closed</option>
+                                                <option value="5">5 Year Fixed-Rate Closed</option>
+                                                <option value="7">7 Year Fixed-Rate Closed</option>
+                                                <option value="10">10 Year Fixed-Rate Closed</option>
+                                                <option value="3V">3 Year Variable-Rate Closed</option>
+                                                <option value="5V">5 Year Variable-Rate Closed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="interest-rate" for="validationDefault04">Interest rate</label>
+                                            <input type="text" name="interest-rate" class="form-control" id="validationDefault04" value="3.64">
+                                            <span class="input-right">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-sm-12 col-xs-12 mb-3">
+                                            <a class="btn btn-orange" onclick="calculatePrepayment();">CALCULATE</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="smortgage2" class="tab-pane fade in">
+                                <form class="d-flex flex-column">
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="property1-use"><p>How will you use this property?</p></label>
+                                            <br>
+                                            <input type="radio" id="i-live-there" name="property1-use" value="i'll live there" checked="checked">
+                                            <label for="i'll-live-there" class="radio-label"><p>I live there</p></label>
+                                            <br>
+                                            <input type="radio" id="live-and-rent" name="property1-use" value="I'll live there and rent it out">
+                                            <label for="" class="radio-label"><p>I live there and rent it out</p></label>
+                                            <br>
+                                            <input type="radio" id="rent" name="property1-use" value="I'll rent it out">
+                                            <label for="" class="radio-label"><p>I rent it out</p></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <span class="input-left">$</span>
+                                            <label id="estimated-property-value" for="validationDefault01">Estimated property value</label>
+                                            <input type="text" name="estimated-property-value" class="form-control amount" id="validationDefault01" value="500000">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <span class="input-left">$</span>
+                                            <label id="remaining-balance">Remaining mortgage balance &nbsp;<a data-toggle="tooltip" data-placement="top" title="You can estimate this based on recent sales of similar homes in your area.">
+                                                <i class="fa fa-info-circle"></i>
+                                              </a></label>
+                                            <input type="text" name="remaining-balance" class="form-control amount" value="475000">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                          <label for="validationDefault05">Amortization &nbsp;<a data-toggle="tooltip" data-placement="top" title="The length of time you have left before you fully pay off your mortgage.">
+                                            <i class="fa fa-info-circle"></i>
+                                          </a></label>
+                                          <div class="d-flex">
+                                            <select class="form-control form-select" type="text" name="years"  id="validationDefault05" required style="width: 50%;">
+                                                <option value="12years">12 years</option>
+                                                <option value="13years">13 years</option>
+                                                <option value="14years">14 years</option>
+                                                <option value="15years">15 years</option>
+                                                <option value="16years">16 years</option>
+                                                <option value="17years">17 years</option>
+                                                <option value="18years">18 years</option>
+                                                <option value="19years">19 years</option>
+                                                <option value="20years">20 years</option>
+                                                <option value="21years">21 years</option>
+                                                <option value="22years">22 years</option>
+                                                <option value="23years">23 years</option>
+                                                <option value="24years">24 years</option>
+                                                <option selected value="25years">25 years</option>
+                                            </select>
+                                            <select class="form-control form-select" type="text" name="months"  id="validationDefault05" style="width: 50%;">
+                                                <option value="0months" selected>0 months</option>
+                                                <option value="1months">1 months</option>
+                                                <option value="2months">2 months</option>
+                                                <option value="3months">3 months</option>
+                                                <option value="4months">4 months</option>
+                                                <option value="5months">5 months</option>
+                                                <option value="6months">6 months</option>
+                                                <option value="7months">7 months</option>
+                                                <option value="8months">8 months</option>
+                                                <option value="9months">9 months</option>
+                                                <option value="10months">10 months</option>
+                                                <option value="11months">11 months</option>
+                                                <option value="12months">12 months</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label for="validationDefault06">Payment frequency</label>
+                                            <select class="form-control form-select" type="text" name="payment-frequency"  id="validationDefault06" placeholder="" required>
+                                            <option value="Weekly">Weekly</option>
+                                            <option value="WeeklyAccelerated">Weekly Accelerated</option>
+                                            <option value="BiWeekly">Bi Weekly</option>
+                                            <option value="BiWeeklyAccelerated">Bi Weekly Accelerated</option>
+                                            <option value="SemiMonthly">Semi Monthly</option>
+                                            <option selected value="Monthly">Monthly</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="mortgage-type" for="validationDefault03">Mortgage term and type</label>
+                                            <select class="form-control form-select" type="text" name="projecttype"  id="validationDefault03">
+                                                <option value="0" selected>Select</option>
+                                                <option value="1">1 Year Fixed-Rate Closed</option>
+                                                <option value="2">2 Year Fixed-Rate Closed</option>
+                                                <option value="3">3 Year Fixed-Rate Closed</option>
+                                                <option value="4">4 Year Fixed-Rate Closed</option>
+                                                <option value="5">5 Year Fixed-Rate Closed</option>
+                                                <option value="7">7 Year Fixed-Rate Closed</option>
+                                                <option value="10">10 Year Fixed-Rate Closed</option>
+                                                <option value="3V">3 Year Variable-Rate Closed</option>
+                                                <option value="5V">5 Year Variable-Rate Closed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xs-12 mb-3">
+                                            <label id="interest-rate" for="validationDefault04">Interest rate</label>
+                                            <input type="text" name="interest-rate" class="form-control" id="validationDefault04" value="3.64">
+                                            <span class="input-right">%</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="col-sm-12 col-xs-12 mb-3">
+                                            <a class="btn btn-orange" onclick="calculatePrepayment();">CALCULATE</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div><!-- End of Switching a motgage-->
+                    
+                    <div id="comparison-summary" class="col-md-7" style="padding: 10px 20px; font-size: 20px;">
+                        <strong>Comparison summary</strong>
+                        <span class="hint"><i class="fa fa-lightbulb-o icon"></i>With mortgage 2, you'll pay off your mortgage 3 years faster</span>
+                        <div class="row">
+                            <div class="col-md-6 d-flex flex-column">
+                                <small class="title">MORTGAGE 1</small>
+                                <div class="comp-row">
+                                    <small class="heading">Mortgage term and type</small>
+                                    <strong class="description">5 Year Fixed-Rate Closed</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">Interest rate</small>
+                                    <strong class="description">3.64 %</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">Payment</small>
+                                    <strong class="description">$2,503.04 monthly</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">Mortgage balance</small>
+                                    <strong class="description">$494,000.00</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">Amortization</small>
+                                    <strong class="description">25 years</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">End of term balance</small>
+                                    <strong class="description">$427,309.29</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex flex-column">
+                                <small class="title">MORTGAGE 2</small>
+                                <div class="comp-row">
+                                    <small class="heading">Mortgage term and type</small>
+                                    <strong class="description">5 Year Fixed-Rate Closed</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">Interest rate</small>
+                                    <strong class="description">3.64 %</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">Payment</small>
+                                    <strong class="description">$1,251.52 accelerated bi-weekly</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">Mortgage balance</small>
+                                    <strong class="description">$494,000.00</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">Amortization</small>
+                                    <strong class="description">22 years</strong>
+                                </div>
+                                <div class="comp-row">
+                                    <small class="heading">End of term balance</small>
+                                    <strong class="description">$413,470.83</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 10px; background-color: #F8F8FA; margin: 20px 0;">
+                            <strong style="font-size: 18px;"><i class="fa fa-comment"></i> Have a question?</strong>
+                            <p>Call <a class="btn btn-bgnone" href="tel:4162017088">416-201-7088</a> to speak with a Mortgage Advisor.</p>
+                        </div>
+                        
+                        <div style="margin: 20px 0; text-align: justify;">
+                            <p>The information and estimated results provided in the prepayment charge calculator are based on the information you provided and are for illustrative purposes only, and should not be relied upon. We use reasonable efforts to provide accurate and up-to-date information in this calculator, but cannot guarantee that all information is accurate, complete or current at all times. The actual prepayment charge and cash back repayment may differ from the estimate provided. Additional costs, such as discharge, assignment, or registration fees, may apply and are not included in the estimate. Additional costs and fees vary by province and may change at any time without prior notice.</p>
+                            <p>For partial prepayments, the prepayment charge is estimated based on the amount of prepayment privilege remaining for your anniversary year. This value was estimated as the difference between the prepayment privilege and the already prepaid amount you inputted in the calculator and may not reflect actual values. The savings results estimates assume a constant interest rate over the length of a 25 year amortization period and monthly payment frequency. The estimated prepayment charge is not factored into the savings estimate.</p>
+                            <p>To know your actual prepayment charge and cash back repayment, or if you have any questions, please contact us at <a class="btn btn-bgnone" href="tel:4162017088">416-201-7088</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--  FAQs Section-->
+        <section id="faqs-section" class="gray-bg"> 
+            <div class="container">
+                <div class="row">
+                    <h1 class="heading text-center">Frequently asked questions</h1>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is the home buyers' plan?</strong>
+                            <p class="description">The Canadian Government’s Home Buyers' Plan (HBP) allows first-time home buyers to borrow up to $35,000 from their RRSP for a down payment, tax-free.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is the difference between an open and closed mortgage?</strong>
+                            <p class="description">With a closed mortgage, you will receive a lower interest rate (compared to an open mortgage), but there is a maximum annual amount you can pay towards your mortgage balance without penalty.</p>
+                    
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is the mortgage stress test?</strong>
+                            <p class="description">The mortgage stress test requires financial institutions to make sure a borrower can still make mortgage payments if interest rates increase.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is the difference between a mortgage amortization period and mortgage term?</strong>
+                            <p class="description">Your mortgage amortization is the length of time until your mortgage is fully repaid, typically ranging from 25-30 years. Your mortgage will have a set term. The term is the length of time you are committing to your mortgage agreement.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                            <strong class="title">What is mortgage default insurance?</strong>
+                            <p class="description">Mortgage default insurance protects lenders if a borrower is unable to repay their mortgage and is a regulatory requirement for high ratio mortgages (less than 20% down payment).</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-wrapper">
+                          <strong class="title">What is creditor insurance?</strong>
+                           <p class="description">Creditor insurance protects you and your family. It's used to pay out a mortgage balance or cover your mortgage payments on your behalf if something unexpected happens.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn btn-bgnone">SEE ALL <i style="font-size: 15px;" class="fa fa-chevron-right"></i></a>
+            </div>
+        </section>
+
+        
+        <!--  Insurance Section-->
+        <section id="insurance-section"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-wrapper text-center">
+                        <h1 class="title">Get expert advice when you need it</h1>
+                        <p class="description">Call us at 1-888-909-5588 to get your own dedicated Mortgage Advisor to help you through the process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container-fluid footer-block">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <p class="copyright">©2020 <a href="index.html">FORTRESS</a></p>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 d-flex justify-content-end">
+                        <div class="social-block text-primary">
+                            <ul class="social-links">
+                              <li><a href="#" class="instagram"><i class="bx bxl-instagram"></i></a></li>
+                              <li><a href="#" class="youtube"><i class="bx bxl-youtube"></i></a></li>
+                              <li><a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a></li>
+                              <li><a href="#" class="facebook"><i class="bx bxl-facebook"></i></a></li>
+                              <li><a href="#" class="twitter"><i class="bx bxl-twitter"></i></a></li>
+                              <li><a href="#" class="tiktok"><i class="bx bxl-tiktok"></i></a></li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer><!-- End Footer -->
+
+
+        <div class="modal fade popup-modal" id="apply-now" role="dialog">
+            <div class="modal-dialog modal-holder" role="document">
+              <div class="modal-content popup-content">
+                <div class="modal-header flex-column">
+                  <button type="button" class="close popup-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="bi bi-x-lg"></i></span>
+                  </button>
+                  <h2 class="modal-title popup-label">Let's get started with Real Estate Funding</h2>
+                </div>
+                <div class="modal-body popup-body">
+                    <div class="container-sm">
+                      <div class="row">
+                        <div class="col-md-1 d-xs-none"></div>
+                        <div class="col-md-10 col-sm-12">
+                          <form class="d-flex flex-column" action="applynow.php" method="post" role="form">
+                            <div class="form-row">
+                              <div class="col-sm-6 col-xs-12 mb-3">
+                                <label for="validationDefault01">Name<span style="color: #cf0e07;">*</span></label>
+                                <input type="text" name="fname" class="form-control" id="validationDefault01" placeholder="Full Name" required>
+                              </div>
+                              <div class="col-sm-6 col-xs-12 mb-3">
+                                <label for="validationDefault02">Email Address<span style="color: #cf0e07;">*</span></label>
+                                <input type="text" name="email" class="form-control" id="validationDefault02" placeholder="Email Address" required>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-sm-6 col-xs-12 mb-3">
+                                <label for="validationDefault03">Phone</label>
+                                <input type="text" name="phone" class="form-control" id="validationDefault03" placeholder="Phone Number">
+                              </div>
+                              <div class="col-sm-6 col-xs-12 mb-3">
+                                <label for="validationDefault04">Type of Real Estate Project?<span style="color: #cf0e07;">*</span></label>
+                                <select class="form-control form-select" type="text" name="projecttype"  id="validationDefault04" placeholder="" required>
+                                  <option selected>Select your type</option>
+                                  <option value="Commercial-Construction">Commercial Construction</option>
+                                  <option value="Commercial-Acquisition">Commercial Acquisition</option>
+                                  <option value="Commercial-Refinance">Commercial Refinance</option>
+                                  <option value="Residential-Acquisition">Residential Acquisition/Refinance</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-sm-6 col-xs-12 mb-3">
+                                  <label for="validationDefault05">Funding Required?<span style="color: #cf0e07;">*</span></label>
+                                  <select class="form-control form-select" type="text" name="funding"  id="validationDefault05" placeholder="" required>
+                                    <option selected>Select your amount</option>
+                                    <option value="Less-than-$1M">Less than $1M</option>
+                                    <option value="$1M-$5M">$1M - $5M</option>
+                                    <option value="$5M-$10M">$5M - $10M</option>
+                                    <option value="$10M-and-above">$10M and above</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-6 col-xs-12 mb-3">
+                                    <label for="validationDefault06">Requested loan to value %<span style="color: #cf0e07;">*</span></label>
+                                    <select class="form-control form-select" type="text" name="loan-value"  id="validationDefault06" placeholder="" required>
+                                      <option selected>Select your value</option>
+                                      <option value="Less-than-50%">Less than 50%</option>
+                                      <option value="50%-65%">50% - 65%</option>
+                                      <option value="65%-75%">65% - 75%</option>
+                                      <option value="Above-75%">Above 75%</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="col-sm-12 col-xs-12 mb-3 text-center">
+                                    <button class="btn btn-orange" type="submit">Submit</button>
+                                </div>
+                            </div>
+
+                          </form>
+                      </div>
+                      <div class="col-md-1 d-xs-none"></div>
+                    </div>
+              
+              
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/owlcarousel/js/popper.min.js"></script>
+        <script src="assets/vendor/owlcarousel/js/owl.carousel.min.js"></script>
+        <script src="assets/vendor/owlcarousel/js/carousel.js"></script>
+
+         <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+        <script>changePurpose1();</script>
+    </body>
+</html>
